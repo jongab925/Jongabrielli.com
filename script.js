@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'Assests/DSC00419.jpg', alt: 'Jon Gabrielli Live Show DSC00419' },
         { src: 'Assests/DSC00424.jpg', alt: 'Jon Gabrielli Comedy Stage DSC00424' },
         { src: 'Assests/20190730_133332.jpg', alt: 'Jon Gabrielli Action Shot 2019' },
-        { src: 'Assests/img_1_1755467372817.jpg', alt: 'Jon Gabrielli Laughing on Stage' }
+        { src: 'Assests/img_1_1755467372817.jpg', alt: 'Jon Gabrielli Laughing on Stage' },
+        { src: 'Assests/media__1782981300652.jpg', alt: 'Jon Gabrielli Live Comedy Dog In Me' }
     ];
     let currentLightboxIndex = 0;
 
