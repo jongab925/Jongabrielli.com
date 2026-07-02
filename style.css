@@ -1789,7 +1789,7 @@ input:focus, button:focus {
     
     .nav .nav-link:hover, 
     .nav .nav-link.active {
-        color: var(--color-accent);
+        color: #ff4d4d;
     }
     
     /* Small screen menu style - center logo */
