@@ -822,6 +822,32 @@ input:focus, button:focus {
     text-align: justify;
 }
 
+.credits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.credits-list li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    padding-left: 28px;
+    position: relative;
+}
+
+.credits-list li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+}
+
 .press-subtitle-sub {
     font-family: 'Outfit', sans-serif;
     font-size: 1.5rem;
