@@ -1648,6 +1648,11 @@ input:focus, button:focus {
     }
 }
 
+/* Mobile Menu Toggle Button base style */
+.menu-toggle-btn {
+    display: none;
+}
+
 /* Mobile & Smaller Layouts */
 @media (max-width: 768px) {
     :root {
@@ -1666,8 +1671,81 @@ input:focus, button:focus {
         display: none; /* Hide ticket CTA in header on mobile */
     }
     
+    .menu-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        color: var(--color-text);
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1010; /* Above header */
+    }
+    
+    .menu-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .menu-icon line {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center;
+    }
+    
+    /* Transforming hamburger icon into X close icon */
+    .menu-toggle-btn.active .line-mid {
+        opacity: 0;
+    }
+    .menu-toggle-btn.active .line-top {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle-btn.active .line-bot {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Responsive Overlay Navigation */
     .nav {
-        display: none; /* We can toggle a menu, or since it's a small app, keep header minimal or hide links */
+        display: flex !important; /* Override layout checks */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(11, 12, 16, 0.98);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        gap: 32px;
+        z-index: 1000; /* Covering screen */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .nav .nav-link {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--color-text-secondary);
+        margin: 0;
+        padding: 8px 16px;
+    }
+    
+    .nav .nav-link::after {
+        display: none; /* Hide desktop underline animations */
+    }
+    
+    .nav .nav-link:hover, 
+    .nav .nav-link.active {
+        color: var(--color-accent);
     }
     
     /* Small screen menu style - center logo */

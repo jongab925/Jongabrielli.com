@@ -76,6 +76,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================================================
+       1.5. MOBILE MENU INTERACTIVITY
+       ========================================================================== */
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const navMenu = document.querySelector('.nav');
+    
+    if (menuToggleBtn && navMenu) {
+        menuToggleBtn.addEventListener('click', () => {
+            menuToggleBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking a link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggleBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    /* ==========================================================================
        2. SCROLL EVENTS
        ========================================================================== */
     // Change header appearance on scroll
