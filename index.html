@@ -102,14 +102,255 @@
                     <span class="section-tag">Catch Me Live</span>
                     <h2 class="section-title">Upcoming Shows &amp; Dates</h2>
                     <div class="section-divider-center"></div>
-                    <p class="section-subtitle">New dates are currently being scheduled. Request a show in your city above!</p>
+                    <p class="section-subtitle">Find a city near you. Tickets sell out fast, so grab yours today!</p>
                 </div>
 
-                <div class="coming-soon-card" style="text-align: center; max-width: 600px; margin: 40px auto 0 auto; background: var(--color-bg-card); border: 1px solid var(--color-border); padding: 40px; border-radius: var(--border-radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                    <div style="font-size: 3rem; margin-bottom: 20px; color: var(--color-accent);">📅</div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 12px; color: var(--color-text);">New Show Dates Coming Soon</h3>
-                    <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 24px; font-size: 0.95rem;">Jon is planning his upcoming performance schedule. Tell us what city you'd like to see him perform in the mailing list above, and you'll hear from him when he's in your area!</p>
-                    <a href="#newsletter" class="btn btn-secondary btn-sm" style="display: inline-block;">Join Mailing List</a>
+                <!-- Search Filter -->
+                <div class="tour-filter-wrapper">
+                    <div class="search-input-container">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="tour-search" placeholder="Filter by City, State, or Venue...">
+                    </div>
+                </div>
+
+                <!-- Shows List -->
+                <div class="tour-list" id="tour-list">
+                    <!-- Show Item 1 -->
+                    <div class="tour-item" data-location="san francisco ca columbus cafe sf jul july 2 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">02</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Columbus Cafe</h3>
+                            <p class="tour-city">San Francisco, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 2 -->
+                    <div class="tour-item" data-location="san francisco ca mr mahjong sf jul july 2 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">02</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Mr. Mahjong</h3>
+                            <p class="tour-city">San Francisco, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 3 -->
+                    <div class="tour-item" data-location="santa rosa ca mercy lounge jul july 3 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">03</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Mercy Lounge</h3>
+                            <p class="tour-city">Santa Rosa, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 4 -->
+                    <div class="tour-item" data-location="san francisco ca oreillys sf jul july 6 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">06</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">O'Reilly's</h3>
+                            <p class="tour-city">San Francisco, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 5 -->
+                    <div class="tour-item" data-location="san francisco ca abbey tavern sf jul july 6 815pm">
+                        <div class="tour-date">
+                            <span class="tour-day">06</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Abbey Tavern</h3>
+                            <p class="tour-city">San Francisco, CA &bull; 8:15 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 6 -->
+                    <div class="tour-item" data-location="healdsburg ca papapietro perry winery jul july 10 7pm">
+                        <div class="tour-date">
+                            <span class="tour-day">10</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Papapietro Perry Winery</h3>
+                            <p class="tour-city">Healdsburg, CA &bull; 7:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 7 -->
+                    <div class="tour-item" data-location="berkeley berekely ca vintage winery jul july 11 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">11</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Vintage Winery</h3>
+                            <p class="tour-city">Berkeley, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 8 -->
+                    <div class="tour-item" data-location="santa cruz ca crows nest jul july 12 9pm">
+                        <div class="tour-date">
+                            <span class="tour-day">12</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Crow's Nest</h3>
+                            <p class="tour-city">Santa Cruz, CA &bull; 9:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 9 -->
+                    <div class="tour-item" data-location="murphys ca 2k fest 2kfest jul july 17 18 19">
+                        <div class="tour-date">
+                            <span class="tour-day" style="font-size: 1.5rem; line-height: 1.5;">17-19</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">2k Fest</h3>
+                            <p class="tour-city">Murphys, CA &bull; Festival</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 10 -->
+                    <div class="tour-item" data-location="san francisco ca mr bings sf jul july tbd 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day" style="font-size: 1.8rem; line-height: 1.2;">TBD</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Mr. Bing's</h3>
+                            <p class="tour-city">San Francisco, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 11 -->
+                    <div class="tour-item" data-location="brentwood ca the lounge jul july 29 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">29</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">The Lounge</h3>
+                            <p class="tour-city">Brentwood, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+
+                    <!-- Show Item 12 -->
+                    <div class="tour-item" data-location="san francisco ca neck of the woods sf jul july 30 8pm">
+                        <div class="tour-date">
+                            <span class="tour-day">30</span>
+                            <div class="tour-month-year">
+                                <span class="tour-month">JUL</span>
+                                <span class="tour-year">2026</span>
+                            </div>
+                        </div>
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Neck of the Woods</h3>
+                            <p class="tour-city">San Francisco, CA &bull; 8:00 PM</p>
+                        </div>
+                        <div class="tour-status-action">
+                            <span class="badge badge-success">On Sale</span>
+                            <a href="https://www.instagram.com/jongabcomedy/" target="_blank" rel="noopener" class="btn btn-primary tour-btn">Get Tickets</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty Search State -->
+                <div id="no-tour-results" style="display: none; text-align: center; color: var(--color-text-secondary); margin-top: 40px; font-family: 'Outfit', sans-serif;">
+                    <p>No shows found matching your search. Keep checking back for added dates!</p>
                 </div>
             </div>
         </section>
