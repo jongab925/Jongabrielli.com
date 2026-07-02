@@ -357,6 +357,24 @@ input:focus, button:focus {
     gap: 20px;
 }
 
+.header-social-link {
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: color var(--transition-fast);
+}
+
+.header-social-link:hover {
+    color: var(--color-accent);
+}
+
+.header-social-link .social-svg {
+    width: 20px;
+    height: 20px;
+}
+
 .cart-btn {
     position: relative;
     cursor: pointer;
