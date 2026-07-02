@@ -24,15 +24,6 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
             <div class="header-actions">
-                <button class="cart-btn" id="open-cart-btn" aria-label="Open Shopping Cart">
-                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                    <span class="cart-badge" id="cart-badge">0</span>
-                </button>
-                <a href="index.html#shows" class="btn btn-primary btn-sm header-cta">Tickets</a>
                 <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
@@ -92,101 +83,9 @@
         </div>
     </footer>
 
-    <!-- Shopping Cart Slide-out Drawer -->
-    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="close-btn" id="close-cart-btn" aria-label="Close Cart">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-        </div>
-        <div class="cart-items" id="cart-items-container">
-            <div class="cart-empty-message" id="cart-empty-message">
-                <svg class="empty-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                <p>Your cart is empty.</p>
-                <button class="btn btn-secondary btn-sm" id="shop-now-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="cart-footer" id="cart-footer" style="display: none;">
-            <div class="cart-summary-line">
-                <span>Subtotal</span>
-                <span id="cart-subtotal">$0.00</span>
-            </div>
-            <div class="cart-summary-line">
-                <span>Estimated Shipping</span>
-                <span>FREE</span>
-            </div>
-            <div class="cart-summary-line total-line">
-                <span>Total</span>
-                <span id="cart-total">$0.00</span>
-            </div>
-            <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
-        </div>
-    </div>
 
-    <!-- Simulated Checkout Modal -->
-    <div class="checkout-modal-overlay" id="checkout-modal-overlay"></div>
-    <div class="checkout-modal" id="checkout-modal">
-        <button class="close-btn" id="close-checkout-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-        <div class="checkout-success-view" id="checkout-success-view" style="display: none;">
-            <div class="success-icon-large">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            </div>
-            <h2>Order Placed Successfully!</h2>
-            <p>Thank you for supporting Jon Gabrielli. A confirmation email and details have been sent to your address.</p>
-            <button class="btn btn-primary" id="success-done-btn">Back to Shop</button>
-        </div>
-        <div class="checkout-form-view" id="checkout-form-view">
-            <h2>Secure Checkout</h2>
-            <p>Complete your purchase simulated transaction below.</p>
-            <div class="checkout-summary-box">
-                <p><strong>Order Summary:</strong> <span id="checkout-summary-qty">0 items</span></p>
-                <p><strong>Total Due:</strong> <span id="checkout-summary-total">$0.00</span></p>
-            </div>
-            <form id="simulated-payment-form">
-                <div class="form-row-two">
-                    <div class="form-group-chk">
-                        <label for="chk-first">First Name</label>
-                        <input type="text" id="chk-first" required>
-                    </div>
-                    <div class="form-group-chk">
-                        <label for="chk-last">Last Name</label>
-                        <input type="text" id="chk-last" required>
-                    </div>
-                </div>
-                <div class="form-group-chk">
-                    <label for="chk-email">Email Address</label>
-                    <input type="email" id="chk-email" required>
-                </div>
-                <div class="form-group-chk">
-                    <label for="chk-address">Shipping Address</label>
-                    <input type="text" id="chk-address" required placeholder="123 Comedy Way">
-                </div>
-                <div class="form-row-three">
-                    <div class="form-group-chk">
-                        <label for="chk-city">City</label>
-                        <input type="text" id="chk-city" required>
-                    </div>
-                    <div class="form-group-chk">
-                        <label for="chk-state">State</label>
-                        <input type="text" id="chk-state" required placeholder="NY">
-                    </div>
-                    <div class="form-group-chk">
-                        <label for="chk-zip">Zip Code</label>
-                        <input type="text" id="chk-zip" required placeholder="10001">
-                    </div>
-                </div>
-                <div class="form-group-chk card-group">
-                    <label for="chk-card">Card Info (Simulation)</label>
-                    <input type="text" id="chk-card" required placeholder="4111 2222 3333 4444" pattern="\d{16}" title="16-digit credit card number">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block" id="submit-purchase-btn">Pay Now &amp; Complete Order</button>
-            </form>
-        </div>
-    </div>
+
+
 
     <!-- Core Logic -->
     <script src="script.js"></script>
