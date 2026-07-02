@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'Assests/A14I5513.jpg', alt: 'Jon Gabrielli Stand-Up A14I5513' },
         { src: 'Assests/A14I5933.jpg', alt: 'Jon Gabrielli Comedy Stance A14I5933' },
         { src: 'Assests/DSC00419.jpg', alt: 'Jon Gabrielli Live Show DSC00419' },
-        { src: 'Assests/Unknown.jpeg', alt: 'Jon Gabrielli Stand-Up Portrait' },
+        { src: 'Assests/unknown.jpeg', alt: 'Jon Gabrielli Stand-Up Portrait' },
         { src: 'Assests/20190730_133332.jpg', alt: 'Jon Gabrielli Action Shot 2019' },
         { src: 'Assests/img_1_1755467372817.jpg', alt: 'Jon Gabrielli Laughing on Stage' },
         { src: 'Assests/1000024777.jpg', alt: 'Jon Gabrielli Live Comedy Stage' },
