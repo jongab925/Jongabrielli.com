@@ -512,29 +512,31 @@ document.addEventListener('DOMContentLoaded', () => {
                         submitBtn.textContent = originalText;
                     }
                     
+                    const nameVal = nameInput.value.trim();
+                    const emailVal = emailInput.value.trim();
+                    const cityVal = cityInput.value.trim();
+
                     // Keep track of the city they provide in localStorage
                     const subscribers = JSON.parse(localStorage.getItem('jg_subscribers') || '[]');
                     subscribers.push({
-                        name: nameInput.value.trim(),
-                        email: emailInput.value.trim(),
-                        city: cityInput.value.trim(),
+                        name: nameVal,
+                        email: emailVal,
+                        city: cityVal,
                         timestamp: new Date().toISOString()
                     });
                     localStorage.setItem('jg_subscribers', JSON.stringify(subscribers));
                     console.log('New show request logged:', subscribers[subscribers.length - 1]);
                     console.log('All subscriber recommendations:', subscribers);
 
-                    // Hide Form and Show Success message
-                    newsletterForm.style.display = 'none';
-                    if (newsletterSuccess) {
-                        newsletterSuccess.style.display = 'flex';
-                        newsletterSuccess.style.opacity = '0';
-                        
-                        setTimeout(() => {
-                            newsletterSuccess.style.transition = 'opacity 0.5s ease';
-                            newsletterSuccess.style.opacity = '1';
-                        }, 50);
-                    }
+                    // Redirect to Google Forms with prefilled values
+                    const baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdfU19qrqqQceqmS_LhLotPnZAc_m5Cb6WJLGCtlS0XJi2K_A/viewform";
+                    const queryParams = new URLSearchParams();
+                    queryParams.append("usp", "pp_url");
+                    queryParams.append("entry.478943191", nameVal);    // Name field
+                    queryParams.append("entry.1778147259", emailVal);  // Email field
+                    queryParams.append("entry.1383203351", cityVal);   // City field
+                    
+                    window.location.href = `${baseUrl}?${queryParams.toString()}`;
 
                 }, 1200);
             }
