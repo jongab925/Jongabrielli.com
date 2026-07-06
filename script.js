@@ -55,6 +55,61 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutSummaryTotal = document.getElementById('checkout-summary-total');
     const paymentForm = document.getElementById('simulated-payment-form');
 
+    // Helper function to check if a show is in the past
+    function isShowPast(item) {
+        const dayEl = item.querySelector('.tour-day');
+        const monthEl = item.querySelector('.tour-month');
+        const yearEl = item.querySelector('.tour-year');
+        
+        if (!dayEl || !monthEl || !yearEl) return false;
+        
+        const yearText = yearEl.textContent.trim();
+        const monthText = monthEl.textContent.trim().toUpperCase();
+        const dayText = dayEl.textContent.trim();
+        
+        // Handle TBD dates
+        if (dayText.toUpperCase() === 'TBD') {
+            return false;
+        }
+        
+        const year = parseInt(yearText, 10);
+        if (isNaN(year)) return false;
+        
+        const monthMap = {
+            'JAN': 0, 'FEB': 1, 'MAR': 2, 'APR': 3, 'MAY': 4, 'JUN': 5,
+            'JUL': 6, 'AUG': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DEC': 11
+        };
+        const month = monthMap[monthText];
+        if (month === undefined) return false;
+        
+        // Handle day ranges, e.g. "17-19"
+        let day;
+        if (dayText.includes('-')) {
+            const parts = dayText.split('-');
+            const lastPart = parts[parts.length - 1].trim();
+            day = parseInt(lastPart, 10);
+        } else {
+            day = parseInt(dayText, 10);
+        }
+        if (isNaN(day)) return false;
+        
+        // Show date at midnight (local time)
+        const showDate = new Date(year, month, day);
+        
+        // Today's date at midnight (local time)
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        return showDate < today;
+    }
+
+    // Automatically remove past shows from the DOM before selecting tourItems
+    document.querySelectorAll('.tour-item').forEach(item => {
+        if (isShowPast(item)) {
+            item.remove();
+        }
+    });
+
     // Tour Elements
     const tourSearchInput = document.getElementById('tour-search');
     const tourItems = document.querySelectorAll('.tour-item');
