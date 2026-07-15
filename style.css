@@ -1907,4 +1907,12 @@ input:focus, button:focus {
         top: 20px;
         right: 20px;
     }
+    
+    .press-bio-card {
+        padding: 24px;
+    }
+    
+    .press-bio-card p {
+        text-align: left;
+    }
 }
